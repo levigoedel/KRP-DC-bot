@@ -52,5 +52,11 @@ client.on("ready", async () =>{
 
 });
 
-//process.env.token
-client.login(botConfig.token);
+/* HAAL ENVIRONMENT VARIABLES UIT HEROKU */
+const aws = require('aws-sdk');
+
+let token = new aws.S3({
+  accessKeyId: process.env.S3_KEY,
+  secretAccessKey: process.env.S3_SECRET
+});
+client.login(secretAccessKey);
