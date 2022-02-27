@@ -52,4 +52,5 @@ client.on("ready", async () =>{
 
 });
 
-client.login(process.env.token);
+//process.env.token
+client.login(botConfig.token);
