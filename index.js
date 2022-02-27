@@ -4,8 +4,6 @@ const botConfig = require("./botconfig.json");
 const { Client, Intents } = require('discord.js');
 const client = new discord.Client({intents: ["GUILDS", "GUILD_MESSAGES"]});
 
-client.login(botConfig.token);
-
 client.on("ready", async () =>{
  
     console.log(`${client.user.username} is online.`);
@@ -52,11 +50,4 @@ client.on("ready", async () =>{
 
 });
 
-/* HAAL ENVIRONMENT VARIABLES UIT HEROKU */
-const aws = require('aws-sdk');
-
-let token = new aws.S3({
-  accessKeyId: process.env.S3_KEY,
-  secretAccessKey: process.env.S3_SECRET
-});
-client.login(secretAccessKey);
+client.login(process.env.token);
