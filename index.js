@@ -10,7 +10,7 @@ client.on("ready", async () =>{
  
     console.log(`${client.user.username} is online.`);
    
-    client.user.setActivity("testen | Probeer =help", { type: "PLAYING" });
+    client.user.setActivity("klooien | Probeer =help", { type: "PLAYING" });
 });
 
 /*******************************
@@ -52,4 +52,4 @@ client.on("ready", async () =>{
 
 });
 
-bot.login(process.env.token);
+client.login(process.env.token);
